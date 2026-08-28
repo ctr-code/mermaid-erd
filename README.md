@@ -4,17 +4,6 @@ You can render entity-relationship diagrams in markdown using Mermaid.  It works
 
 ---
 
-The most obscure bit is the relationship syntax.  I copied this table from [the Mermaid docs](https://mermaid.ai/open-source/syntax/entityRelationshipDiagram.html).
-
-|Value (left)|Value (right)|Meaning|
-|:-:|:-:|---|
-|\|o|o\||Zero or one|
-|\|\||\|\||Exactly one|
-|}o|o{|Zero or more (no upper limit)|
-|}\||\|{|One or more (no upper limit)|
-
----
-
 The following code renders the diagram below it:
 
 ``````
@@ -66,3 +55,14 @@ erDiagram
         string name
     }
 ```
+
+---
+
+The most obscure bit is the relationship syntax.  I copied this table from [the Mermaid docs](https://mermaid.ai/open-source/syntax/entityRelationshipDiagram.html).
+
+|Value (left)|Value (right)|Meaning|
+|:-:|:-:|---|
+|\|o|o\||Zero or one|
+|\|\||\|\||Exactly one|
+|}o|o{|Zero or more (no upper limit)|
+|}\||\|{|One or more (no upper limit)|
