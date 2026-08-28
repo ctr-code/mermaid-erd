@@ -17,7 +17,8 @@ The most obscure bit is the relationship syntax.  I copied this table from [the 
 
 The following code renders the diagram below it:
 
-```
+``````
+``` mermaid
 erDiagram
     User ||--o{ Task : plans
     User {
@@ -40,6 +41,7 @@ erDiagram
         string name
     }
 ```
+``````
 
 ``` mermaid
 erDiagram
