@@ -32,6 +32,8 @@ erDiagram
 ```
 ``````
 
+---
+
 ``` mermaid
 erDiagram
     User ||--o{ Task : plans
