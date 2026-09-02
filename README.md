@@ -9,7 +9,7 @@ The following code renders the diagram below it:
 ``````
 ``` mermaid
 erDiagram
-    User ||--o{ Task : plans
+    User ||--o{ Booking : booked
     User {
         int user_id PK
         string name
@@ -17,17 +17,20 @@ erDiagram
         string first_name
         string last_name
     }
-    Task }|--|| Category : member
-    Task {
-        int task_id PK
-        string title
-        string description
+    Booking }o--|| Table : on
+    Booking {
+        int booking_id PK
+        string date
+        string time
+        int guest_count
+        string status
         int user_id FK
-        int category_id FK
+        int table_id FK
     }
-    Category {
-        int category_id PK
-        string name
+    Table {
+        int table_id PK
+        int table_number
+        int seat_count
     }
 ```
 ``````
@@ -36,7 +39,7 @@ erDiagram
 
 ``` mermaid
 erDiagram
-    User ||--o{ Booking : plans
+    User ||--o{ Booking : booked
     User {
         int user_id PK
         string name
@@ -44,12 +47,20 @@ erDiagram
         string first_name
         string last_name
     }
+    Booking }o--|| Table : on
     Booking {
         int booking_id PK
         string date
         string time
         int guest_count
         string status
+        int user_id FK
+        int table_id FK
+    }
+    Table {
+        int table_id PK
+        int table_number
+        int seat_count
     }
 ```
 
