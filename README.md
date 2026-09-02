@@ -36,7 +36,7 @@ erDiagram
 
 ``` mermaid
 erDiagram
-    User ||--o{ Task : plans
+    User ||--o{ Booking : plans
     User {
         int user_id PK
         string name
@@ -44,17 +44,12 @@ erDiagram
         string first_name
         string last_name
     }
-    Task }|--|| Category : member
-    Task {
-        int task_id PK
-        string title
-        string description
-        int user_id FK
-        int category_id FK
-    }
-    Category {
-        int category_id PK
-        string name
+    Booking {
+        int booking_id PK
+        string date
+        string time
+        int guest_count
+        string status
     }
 ```
 
