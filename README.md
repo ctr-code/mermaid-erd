@@ -16,6 +16,7 @@ erDiagram
         string email
         string first_name
         string last_name
+        string phone_number
     }
     Booking }o--|| Table : on
     Booking {
@@ -46,6 +47,7 @@ erDiagram
         string email
         string first_name
         string last_name
+        string phone_number
     }
     Booking }o--|| Table : on
     Booking {
